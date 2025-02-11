@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}  
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage[english,danish]{babel}
+\usepackage{tabularx}
+\usepackage{fancyvrb}    
+\usepackage{sectsty}
+
+\geometry{left=3.0cm,right=3.0cm,top=2.0cm,bottom=2.0cm} 
+\captionsetup{margin=10pt,font=small,labelfont=bf,labelsep=endash}
+\subsectionfont{\normalsize}
+
+\begin{document}
+\begin{titlepage}
+\title{\Huge DMA 2021 \\ Ugeopgave 1} 
+\author{\\\\\\ \Large Hold 1 - Gruppe 7 \\\\\\ Aditya Fadhillah \\\\ Signe Dueholm Nielsen \\\\ Simon Krogh Anderson\\\\\\}
+\maketitle
+\thispagestyle{empty}   
+\end{titlepage}
+
+
+\pagenumbering{arabic} 
+
+\section*{Del 1} \subsection*{a) Hvad returnerer exists(A, 8, 6)?}
+
+Vi har kørt algoritmen, men her vises kun de dele af den der er relevante.
+
+1. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 0
+    hi = 7
+    while hi >= lo
+        mid = 3 
+        if 6 > 10 
+        if 6 < 10
+            hi = 2
+\end{Verbatim}
+
+2. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 0
+    hi = 2
+    while hi >= lo
+        mid = 1 
+        if 6 > 5 
+            lo = 2
+\end{Verbatim}
+
+3. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 2
+    hi = 2
+    while hi >= lo
+        mid = 2 
+        if 6 > 6 
+        if 6 < 6
+        else 
+            return true
+\end{Verbatim}
+Derfor returnerer exist(A, 8, 6) \textbf{True} \newpage
+
+
+
+\subsection*{b) Hvad returnerer exists(A, 8, 13)?} 
+  
+ 
+1. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 0
+    hi = 7
+    while hi >= lo
+        mid = 3 
+        if 13 > 10 
+            lo = 4 
+\end{Verbatim}
+
+2. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 4
+    hi = 7
+    while hi >= lo
+        mid = 5 
+        if 13 > 16
+        else if 13 < 16
+            hi = 4 
+\end{Verbatim}
+
+3. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 4
+    hi = 4
+    while hi >= lo
+        mid = 4 
+        if 13 > 12
+            lo = 5 
+\end{Verbatim}
+
+3. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 5
+    hi = 4
+    while hi >= lo
+    return false 
+\end{Verbatim}
+
+Derfor returnerer exists(A, 8, 13) \textbf{False} \newpage
+
+\subsection*{c) Hvad returnerer exists(A, 5, 16)?} 
+
+ 
+1. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 0
+    hi = 4
+    while hi >= lo
+        mid = 2
+        if 16 > 6 
+            lo = 3
+\end{Verbatim}
+
+2. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 3
+    hi = 4
+    while hi >= lo
+        mid = 3
+        if 16 > 10 
+            lo = 4
+\end{Verbatim}
+
+3. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 4
+    hi = 4
+    while hi >= lo
+        mid = 4
+        if 16 > 12 
+            lo = 5
+\end{Verbatim}
+
+4. kørsel
+\begin{Verbatim}[frame=lines,label=Algorithm exists,labelposition=topline, numbers=left]
+Algorithm exists(A, n, x)
+    lo = 5
+    hi = 4
+    while hi >= lo
+    return false
+\end{Verbatim}
+
+Derfor returnerer exists(A, 5, 16) \textbf{False} \newpage
+
+
+\subsection*{d) Lav en tabel over hvilke værdier de variable lo, mid og hi antager i hver iteration af while-loopet, lige efter at mid er blevet udregnet, når man kalder exists(A, 8, 14)} 
+
+\begin{center}
+\begin{tabular}{ | m{5em} | m{1cm}| m{1cm}| m{1cm}|m{1cm}| } 
+  \hline
+  Iteration & 1 & 2 & 3 & 4 \\ 
+  \hline
+  lo & 0 & 4 & 4 & 5 \\ 
+  \hline
+  mid & 3 & 5 & 4 & ? \\ 
+  \hline
+  hi & 7 & 7 & 4 & 4 \\ 
+  \hline
+\end{tabular}
+\end{center}
+
+
+\section*{Del 2} \subsection*{a) Forklar med jeres egne ord, hvad funktionen exists gør.} 
+
+Funktionen Exist undersøger om et givent tal eksisterer i arrayet. Hvis det eksisterer, returnerer den true og hvis det ikke eksisterer returnerer den false. 
+
+\section*{Del 3} \subsection*{a) Hvis x er et tal, der ikke findes i A, kan exists(A, n, x) så returnere True? Begrund dit svar. Hvis ja, giv et eksempel på, hvordan dette kan ske.} 
+
+Nej, den kan ikke returnere true ved en fejl, da der stadig vil være to tal rundt om der enten er større eller mindre da x jo ikke indgår i arrayet.
+\
+\subsection*{b) Hvis x er et tal, der findes i A, kan exists(A, n, x) så returnere False? Begrund dit svar. Hvis ja, giv et eksempel på, hvordan dette kan ske.} 
+
+Ja, tag f.eks arrayet A = [1,5,6,10,12,16,17,43]. Hvis vi flytter tallet 6 så A = [1,5,10,12,16,17,6,43] nu kan vi køre algoritmen der starter med en mid-værdi på 3, og da 6 er mindre end 12 går vi mod venstre, og vil derfor aldrig ramme tallet 6 der står på index 6. Derfor returnerer den false.
+
+
+\section*{Del 4} \subsection*{a) Når n= 80, hvor mange gange kan while-loopet så højst køres igennem ved et kaldtilexists(A, n, x)?} 
+Hver gang vi køre et loop, så halveres størrelsen af arrayet. Det vil sige at den maksimale køretid er angivet ved $n/2^{Antal iteration}$. For at finde ud af hvor mange gange while-loopet kan køre regner vi log2(80) = 6.32 men da man ikke kan køre kommatal i loops skal vi altid runde ned ved halve, vi kan skrive hele regnestykket ud sådan her:\\\
+\newline
+1. 80/2 = 40 \newline
+2. 40/2 = 20 \newline
+3. 20/2 = 10 \newline
+4. 10/2 = 5 \newline
+5. 5/2 = 2.5 \newline
+runder ned til 2
+6. 2/2 = 1 \newline
+
+Det vil sige vi kører loopet 6 gange. 
+
+While loopet kan altså køre maksimalt 6 gange når n = 80 
+
+
+\end{document}
+
+
